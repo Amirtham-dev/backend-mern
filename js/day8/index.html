@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+
+<script >
+
+    let customerName = "Amirtham";
+let unitsConsumed = 250;
+let bill;
+
+if (unitsConsumed <= 100) {
+    bill = unitsConsumed * 2;
+} else if (unitsConsumed <= 200) {
+    bill = (100 * 2) + ((unitsConsumed - 100) * 3);
+} else {
+    bill = (100 * 2) + (100 * 3) + ((unitsConsumed - 200) * 5);
+}
+
+console.log("Customer:", customerName);
+console.log("Electricity Bill: ₹" + bill);
+
+
+//task2
+
+let balance = 15000;
+let withdrawAmount = 4000;
+
+if (withdrawAmount <= 0) {
+    console.log("Invalid withdrawal amount");
+} else if (withdrawAmount % 500 !== 0) {
+    console.log("Amount must be a multiple of 500");
+} else if (withdrawAmount > balance) {
+    console.log("Insufficient balance");
+} else {
+    balance = balance - withdrawAmount;
+    console.log("Withdrawal Successful");
+    console.log("Remaining Balance:", balance);
+}
+
+
+//task3
+
+
+let correctPin = 1234;
+
+for (let attempt = 1; attempt <= 3; attempt++) {
+
+    let enteredPin = 1234;
+
+    if (enteredPin === correctPin) {
+        console.log("Login Successful");
+        break;
+    } else {
+        console.log("Incorrect PIN");
+    }
+
+    if (attempt === 3) {
+        console.log("Account Blocked");
+    }
+}
+
+//task4
+
+let price = 250;
+
+for (let quantity = 1; quantity <= 5; quantity++) {
+    let total = quantity * price;
+
+    console.log("Quantity " + quantity + " = ₹" + total);
+}
+
+//task5
+let rows = 3;
+let seats = 5;
+
+for (let row = 1; row <= rows; row++) {
+
+    for (let seat = 1; seat <= seats; seat++) {
+        console.log("Row " + row + " - Seat " + seat);
+    }
+
+}
+
+//task6
+
+function calculateDelivery(amount) {
+
+    let deliveryCharge;
+
+    if (amount >= 1000) {
+        deliveryCharge = 0;
+    } else if (amount >= 500) {
+        deliveryCharge = 50;
+    } else {
+        deliveryCharge = 100;
+    }
+
+    return amount + deliveryCharge;
+}
+
+console.log(calculateDelivery(1200));
+console.log(calculateDelivery(700));
+console.log(calculateDelivery(300));
+
+//task7
+
+let sales = [12000, 18000, 9500, 25000, 16000];
+
+let highest = sales[0];
+
+for (let i = 1; i < sales.length; i++) {
+
+    if (sales[i] > highest) {
+        highest = sales[i];
+    }
+
+}
+
+console.log(highest);
+
+//task8
+let numbers = [1, 2, 3, 2, 1];
+
+let isPalindrome = true;
+
+for (let i = 0; i < numbers.length / 2; i++) {
+
+    if (numbers[i] !== numbers[numbers.length - 1 - i]) {
+        isPalindrome = false;
+        break;
+    }
+
+}
+
+if (isPalindrome) {
+    console.log("Palindrome");
+} else {
+    console.log("Not Palindrome");
+}
+
+//task9
+
+let marks = [45, 78, 32, 90, 67];
+
+let graceMarks = marks.map((mark) => {
+    return mark + 5;
+});
+
+let passedMarks = marks.filter((mark) => {
+    return mark >= 50;
+});
+
+console.log("Grace Marks:", graceMarks);
+console.log("Marks 50 or above:", passedMarks);
+
+//tsk10
+
+let employees = [
+    { id: 101, name: "Arun", salary: 25000 },
+    { id: 102, name: "Priya", salary: 35000 },
+    { id: 103, name: "Kumar", salary: 30000 }
+];
+
+let employee = employees.find((emp) => {
+    return emp.id === 102;
+});
+
+console.log("Employee Name:", employee.name);
+console.log("Employee Salary:", employee.salary);
+
+
+</script>
+
+</body>
+</html>
