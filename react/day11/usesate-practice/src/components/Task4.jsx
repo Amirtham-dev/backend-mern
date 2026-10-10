@@ -34,15 +34,15 @@ const Task4 = () => {
     <>
       <div className="min-h-screen bg-blue-100 flex flex-col justify-center items-center gap-5">
 
-        {/* Heading */}
+        
         <h1 className="text-3xl font-bold text-black mb-5">
           EMPLOYEE LIST
         </h1>
 
-        {/* Card */}
+    
         <div className="bg-white w-96 p-6 rounded-2xl shadow-lg">
 
-          {/* Employee List */}
+        
           <div className="flex flex-col gap-3 justify-center items-center">
 
             {employeelist.map((e, i) => {
