@@ -5,6 +5,11 @@ const Task1 = () => {
     const[student,setStudent]=useState([])
     const[name,setName]=useState("")
 
+    const handleclick=()=>{
+
+        
+    }
+
   return (
     <>
     <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-xl">
